@@ -1,0 +1,278 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{newtxtext,newtxmath}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[
+backend=biber,
+style=apa
+]{biblatex}
+
+\addbibresource{referencias.bib}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{csquotes}
+\usepackage{titlesec}
+
+% ---------------------------------------------------------
+% DEFINICIÓN DE COLORES
+% ---------------------------------------------------------
+\definecolor{azulnoche}{RGB}{0,40,90}
+\definecolor{celesteclaro}{RGB}{224,240,255}
+\definecolor{grisclaro}{RGB}{245,245,245}
+\definecolor{darkgreen}{rgb}{0.533, 0.486, 0.184}
+\definecolor{golden}{RGB}{197,160,89}
+\definecolor{goldford}{RGB}{143,113,54}
+\definecolor{rojo}{RGB}{166,25,46}
+
+% ---------------------------------------------------------
+% CONFIGURACIÓN DE TÍTULOS
+% ---------------------------------------------------------
+\titleformat{\section}
+{\Huge\bfseries\color{azulnoche}}
+{\thesection}
+{1em}
+{}
+
+\titleformat{\subsection}
+{\Large\bfseries\color{azulnoche}}
+{\thesubsection}
+{1em}
+{}
+
+\titleformat{\subsubsection}
+{\large\bfseries\color{azulnoche}}
+{\thesubsubsection}
+{1em}
+{}
+
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{compatibility=false}
+\usepackage{booktabs}
+\usepackage{tocloft}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{listings}
+
+% ---------------------------------------------------------
+% CONFIGURACIÓN DE LISTINGS (CÓDIGO JAVA)
+% ---------------------------------------------------------
+\lstset{
+    language=Java,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{azulnoche}\bfseries,
+    commentstyle=\color{darkgreen}\itshape,
+    stringstyle=\color{rojo},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=8pt,
+    frame=single,
+    rulecolor=\color{azulnoche},
+    backgroundcolor=\color{grisclaro},
+    breaklines=true,
+    showstringspaces=false,
+    tabsize=4
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=azulnoche,
+    urlcolor=azulnoche,
+    citecolor=azulnoche
+}
+
+\setlength{\parindent}{1.5em}
+\onehalfspacing
+\setlength{\cftbeforesecskip}{6pt}
+\renewcommand{\contentsname}{Índice General}
+
+% ---------------------------------------------------------
+% ESTILOS DEL ÍNDICE CON COLORES RESPETADOS
+% ---------------------------------------------------------
+\renewcommand{\cftsecfont}{\color{azulnoche}\bfseries}
+\renewcommand{\cftsubsecfont}{\color{azulnoche}}
+\renewcommand{\cftsubsubsecfont}{\color{azulnoche}\itshape}
+
+\renewcommand{\cftsecpagefont}{\color{azulnoche}\bfseries}
+\renewcommand{\cftsubsecpagefont}{\color{azulnoche}}
+\renewcommand{\cftsubsubsecpagefont}{\color{azulnoche}}
+
+\renewcommand{\cftsecpresnum}{\color{azulnoche}}
+\renewcommand{\cftsubsecpresnum}{\color{azulnoche}}
+\renewcommand{\cftsubsubsecpresnum}{\color{azulnoche}}
+
+\renewcommand{\cftsecaftersnum}{\color{azulnoche}}
+\renewcommand{\cftsubsecaftersnum}{\color{azulnoche}}
+\renewcommand{\cftsubsubsecaftersnum}{\color{azulnoche}}
+
+\begin{document}
+
+% =========================================================
+% CARÁTULA
+% =========================================================
+
+\begin{titlepage}
+\centering
+{\color{golden}\bfseries\large UNIVERSIDAD NACIONAL MAYOR DE SAN MARCOS}\\
+\vspace{0.2cm}
+{\color{golden}\large\textbf{Universidad del Perú, Decana de América}}\\
+\vspace{0.6cm}
+\includegraphics[width=0.5\textwidth]{LOGOUNMSM.png}\\
+\vspace{0.5cm}
+{\color{goldford}\scshape\Large Facultad de Ingeniería de Sistemas e Informática\\}
+{\color{goldford}\scshape\large Escuela Profesional de Ingeniería de Sistemas\\}
+\vspace{0.6cm}
+\color{rojo}\hrule height 0.3mm\vspace{0.5cm}
+{\color{rojo}\Large\bfseries Semana 2 - POO\vspace{0.56cm}}\\
+\color{rojo}\hrule height 0.3mm\vspace{0.6cm}
+{\color{rojo}\Large\textbf{Curso:}}\\
+\vspace{0.2cm}
+{\color{goldford}\Large Programación de Computadoras II}\\
+\vspace{0.7cm}
+{\color{rojo}\Large\textbf{Docente:}}\\
+\vspace{0.2cm}
+{\color{goldford}\Large Javier Elmer Cabrera Díaz}\\
+\vspace{0.7cm}
+{\color{rojo}\Large\textbf{Autor:}}\\
+\vspace{0.2cm}
+{\color{goldford}\Large Mamani Huahualuque, Airton Abedal}\\
+\vspace{1.5cm}
+{\color{goldford}\Large\textbf{Lima, 8 de Septiembre del 2026}}\\
+\end{titlepage}
+
+% =========================================================
+% ÍNDICE
+% =========================================================
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\tableofcontents
+
+\newpage
+
+% =========================================================
+% DOCUMENTO
+% =========================================================
+
+\section{Introducción}
+
+El paradigma de la Programación Orientada a Objetos (POO) constituye la columna vertebral del desarrollo de software moderno, permitiendo abstraer entidades complejas del mundo real hacia estructuras de código modulares, mantenibles y reutilizables. El presente informe aborda el desarrollo práctico de dos tareas fundamentales en el aprendizaje del lenguaje Java: la implementación del principio de encapsulamiento mediante una clase geométrica (Tarea 2.1) y el modelado de diversos niveles de asociación entre objetos (Tarea 2.2).
+
+El objetivo principal de esta entrega es demostrar el dominio técnico en la construcción de clases robustas que protejan su estado interno mediante modificadores de acceso, métodos accesores/modificadores y validaciones de dominio. Asimismo, se ilustran de forma gráfica y conceptual los tres tipos de relaciones estructurales entre clases: \textbf{Asociación Simple}, \textbf{Agregación} y \textbf{Composición}, destacando las diferencias de acoplamiento y ciclo de vida de los componentes en cada caso.
+
+\section{Desarrollo y Código Fuente}
+
+\subsection{Tarea 2.1: Clase Rectangulo y Encapsulamiento}
+
+Para la Tarea 2.1, se diseñó la clase \texttt{Rectangulo} aplicando encapsulamiento estricto. Los atributos \texttt{ancho} y \texttt{alto} se definieron con visibilidad privada, forzando a que cualquier modificación se realice a través de sus respectivos métodos \emph{setter}, los cuales garantizan valores mayores a cero. Se implementaron dos constructores (por defecto y parametrizado) y métodos para el cálculo de área y perímetro.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{java1.jpg}
+    \caption{Código fuente de la clase Rectangulo.java.}
+    \label{fig:rectangulo_java}
+    \vspace{0.2cm}
+    \small{\textbf{Nota:} Implementación de atributos privados con validación en setters y sobrescritura de toString().}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{java2.jpg}
+    \caption{Clase de prueba MainRectangulo.java.}
+    \label{fig:main_rectangulo}
+    \vspace{0.2cm}
+    \small{\textbf{Nota:} Métodos de prueba para verificar la creación de objetos por defecto, parametrizados y modificación de atributos.}
+\end{figure}
+
+\subsection{Tarea 2.2: Relaciones de Asociación, Agregación y Composición}
+
+En la Tarea 2.2 se representan las tres variantes de interacción entre objetos en Java:
+
+\begin{itemize}
+    \item \textbf{Asociación Simple (Vuelo - Aeropuerto):} Los aeropuertos existen de forma totalmente independiente del vuelo. Un vuelo referencia un aeropuerto de origen y uno de destino sin ser dueño de su ciclo de vida.
+    \item \textbf{Agregación (Almacén - Montacargas):} Relación 'tiene-un' con acoplamiento débil. Un almacén utiliza un montacargas, pero si el almacén se destruye, el montacargas puede reasignarse a otro almacén.
+    \item \textbf{Composición (Póliza - Cobertura):} Relación 'parte-de' con acoplamiento fuerte. La cobertura se instancia internamente dentro de la póliza de seguro. Si la póliza deja de existir, su cobertura asociada también se destruye.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{java3.jpg}
+    \caption{Clase Aeropuerto.java (Asociación Simple).}
+    \label{fig:aeropuerto}
+    \vspace{0.2cm}
+    \small{\textbf{Nota:} Definición de la entidad independiente Aeropuerto con atributos de nombre y ciudad.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{java4.jpg}
+    \caption{Clase Vuelo.java (Asociación Simple).}
+    \label{fig:vuelo}
+    \vspace{0.2cm}
+    \small{\textbf{Nota:} Incorporación de atributos de tipo Aeropuerto para relacionar origen y destino.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{java5.jpg}
+    \caption{Clase Montacargas.java (Agregación).}
+    \label{fig:montacargas}
+    \vspace{0.2cm}
+    \small{\textbf{Nota:} Representación del recurso externo Montacargas que puede operar de forma independiente.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{java6.jpg}
+    \caption{Clase Almacen.java (Agregación).}
+    \label{fig:almacen}
+    \vspace{0.2cm}
+    \small{\textbf{Nota:} Relación de agregación mediante la asignación externa de un objeto Montacargas.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{java7.jpg}
+    \caption{Clase Cobertura.java (Composición).}
+    \label{fig:cobertura}
+    \vspace{0.2cm}
+    \small{\textbf{Nota:} Clase dependiente que representa las características de una cobertura de seguro.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{java8.jpg}
+    \caption{Clase PolizaSeguro.java (Composición).}
+    \label{fig:poliza}
+    \vspace{0.2cm}
+    \small{\textbf{Nota:} Instanciación directa e interna del objeto Cobertura dentro del constructor de PolizaSeguro.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{java9.jpg}
+    \caption{Ejecución principal MainAsociaciones.java.}
+    \label{fig:main_asociaciones}
+    \vspace{0.2cm}
+    \small{\textbf{Nota:} Programa principal que ejecuta las tres relaciones entre objetos y muestra el resultado en la consola.}
+\end{figure}
+
+\newpage
+
+\section{Conclusiones}
+
+\begin{itemize}
+    \item \textbf{Garantía de Integridad mediante Encapsulamiento:} La restricción del acceso directo a los atributos de un objeto a través de modificadores \texttt{private} e interfaces de acceso (\emph{getters} y \emph{setters}) asegura que los datos no puedan tomar estados inválidos o inconsistentes dentro del sistema.
+    \item \textbf{Flexibilidad y Reutilización de Código:} Al comprender la diferencia entre Agregación y Composición, el desarrollador puede tomar decisiones de arquitectura adecuadas: optar por agregación cuando se requiera compartir objetos entre distintos módulos, y composición cuando la existencia de un objeto secundario dependa indefectiblemente del objeto contenedor.
+    \item \textbf{Mantenibilidad y Diseño Limpio:} El uso de la anotación \texttt{@Override} para rediseñar métodos estándar como \texttt{toString()} simplifica significativamente el proceso de depuración y salida de datos, promoviendo un código legible, autocontenido y estándar bajo las mejores prácticas de la industria Java.
+\end{itemize}
+
+\end{document}
