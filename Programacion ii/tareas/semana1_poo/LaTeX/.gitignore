@@ -1,0 +1,25 @@
+# Archivos auxiliares de compilación de LaTeX
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.bcf
+*.run.xml
+*.bbl
+*.blg
+
+# Listas de tablas, figuras y códigos
+*.lof
+*.lot
+*.lol
+
+# Archivos de caché e índices
+*.idx
+*.ilg
+*.ind
+*.nav
+*.snm
+*.vrb
