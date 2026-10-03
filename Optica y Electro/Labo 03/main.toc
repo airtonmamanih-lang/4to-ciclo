@@ -1,0 +1,28 @@
+\contentsline {section}{\numberline {1}INTRODUCCIÓN}{2}{section.1}%
+\contentsline {section}{\numberline {2}OBJETIVOS}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Objetivo general}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Objetivos específicos}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}MATERIALES}{2}{section.3}%
+\contentsline {section}{\numberline {4}FUNDAMENTO TEÓRICO}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Intensidad de corriente eléctrica ($I$)}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Densidad de corriente eléctrica ($J$)}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Resistividad ($\rho $) y Resistencia ($R$)}{5}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Ley de Ohm}{5}{subsection.4.4}%
+\contentsline {section}{\numberline {5}PROCEDIMIENTO EXPERIMENTAL}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Experimento N.$^\circ $ 1: Variación de voltaje y corriente manteniendo la resistencia constante}{6}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Experimento N.$^\circ $ 2: Variación de la corriente y la resistencia manteniendo constante el voltaje}{6}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Experimento N.$^\circ $ 3: Variación de la diferencia de potencial y la resistencia manteniendo constante la corriente}{9}{subsection.5.3}%
+\contentsline {section}{\numberline {6}CUESTIONARIO}{14}{section.6}%
+\contentsline {paragraph}{Datos:}{15}{paragraph*.1}%
+\contentsline {paragraph}{Hallando la pendiente del gráfico ($m$):}{15}{paragraph*.2}%
+\contentsline {paragraph}{Hallando el término independiente ($b$):}{15}{paragraph*.3}%
+\contentsline {paragraph}{Resistencia experimental y teórica:}{15}{paragraph*.4}%
+\contentsline {paragraph}{Error porcentual con respecto a los $400\,\Omega $ teóricos:}{15}{paragraph*.5}%
+\contentsline {paragraph}{Datos:}{16}{paragraph*.6}%
+\contentsline {paragraph}{Hallando la pendiente del gráfico ($m$):}{16}{paragraph*.7}%
+\contentsline {paragraph}{Hallando el término independiente ($b$):}{16}{paragraph*.8}%
+\contentsline {paragraph}{Datos:}{18}{paragraph*.9}%
+\contentsline {paragraph}{Voltaje aplicado:}{18}{paragraph*.10}%
+\contentsline {paragraph}{Respuesta conceptual:}{18}{paragraph*.11}%
+\contentsline {section}{\numberline {7}OBSERVACIONES}{21}{section.7}%
+\contentsline {section}{\numberline {8}CONCLUSIONES}{21}{section.8}%
